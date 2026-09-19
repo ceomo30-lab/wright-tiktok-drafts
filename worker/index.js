@@ -11,7 +11,7 @@ export default {async fetch(req,env){const u=new URL(req.url);try{
  if(u.pathname==='/api/operator/restore'&&req.method==='POST')return operatorRestore(req,env);
  if(u.pathname==='/api/operator/status'&&req.method==='GET')return operatorStatus(req,env);
  if(req.method==='GET'&&!u.pathname.startsWith('/api/'))return fetch('https://ceomo30-lab.github.io/wright-tiktok-drafts'+u.pathname+u.search);
- const session=await getSession(req,env);if(!session)return json({error:'Connect TikTok first'},401);
+ let session=await getSession(req,env);if(!session&&['/api/workspace','/api/queue','/api/tiktok/creator-info'].includes(u.pathname))session=await primaryAccount(env);if(!session)return json({error:'Connect TikTok first'},401);
  if(u.pathname==='/api/tiktok/creator-info'&&req.method==='GET')return creatorInfo(session);
  if(u.pathname==='/api/tiktok/direct-post'&&req.method==='POST')return directPost(req,session,env);
  if(u.pathname==='/api/tiktok/status'&&req.method==='GET')return postStatus(u,session);
