@@ -1,0 +1,6 @@
+name = "wright-drafts-app"
+main = "worker/index.js"
+compatibility_date = "2026-09-18"
+
+# KV bindings and encrypted TikTok secrets are added in Cloudflare after first deploy.
+# Keeping them out of source prevents placeholder IDs and secrets entering Git history.
