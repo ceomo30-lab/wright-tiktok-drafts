@@ -14,3 +14,7 @@ id = "REPLACE_AFTER_CREATING_FREE_KV_NAMESPACE"
 directory = "../"
 binding = "ASSETS"
 not_found_handling = "single-page-application"
+
+# Scheduling is app-side; TikTok photo Direct Post has no schedule timestamp field.
+# A production deployment should add a cron trigger and submit only immutable,
+# individually approved queue versions when their approved local time is due.
