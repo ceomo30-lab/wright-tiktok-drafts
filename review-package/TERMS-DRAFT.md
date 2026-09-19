@@ -26,6 +26,6 @@ Access may be limited or ended for security, abuse, legal, or policy reasons.
 [OWNER/COUNSEL TO APPROVE governing disclaimer, liability cap, jurisdiction, and dispute terms.]
 
 ## 8. Contact
-Operator: [LEGAL NAME OR BUSINESS NAME]
-Contact: [SUPPORT EMAIL]
+Operator: WhichAi LLC
+Contact: wright.support@mail.instinct.com
 Jurisdiction/address: [IF REQUIRED]

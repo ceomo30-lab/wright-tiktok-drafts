@@ -2,8 +2,8 @@
 
 TikTok review must not be submitted until the owner approves these exact commitments:
 
-1. **Operator identity:** legal person or business that operates Wright Drafts.
-2. **Support/privacy contact:** public email shown on the site and in policies.
+1. **Operator identity:** WhichAi LLC. Approved by the owner.
+2. **Support/privacy contact:** wright.support@mail.instinct.com. Approved by the owner for public use.
 3. **Audience and minimum age:** recommendation is creator account holders age 18+ for the first release, unless counsel approves another audience.
 4. **Retention:** choose periods for unpublished media, approval/security records, and backups.
 5. **Infrastructure:** approve the actual free backend/hosting provider and its role as a processor.

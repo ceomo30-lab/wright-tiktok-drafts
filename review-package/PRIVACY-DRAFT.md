@@ -25,7 +25,7 @@ Proposed policy: OAuth tokens remain until revoked, expired, or the account is d
 Tokens are kept server-side and access is limited to operating the service. No internet service can promise perfect security.
 
 ## Creator choices
-Creators can disconnect TikTok and revoke access in Wright Drafts. Creators may request access to or deletion of their service data at [SUPPORT EMAIL]. Revocation stops future API access but does not remove posts already published to TikTok; those must be managed in TikTok.
+Creators can disconnect TikTok and revoke access in Wright Drafts. Creators may request access to or deletion of their service data at wright.support@mail.instinct.com. Revocation stops future API access but does not remove posts already published to TikTok; those must be managed in TikTok.
 
 ## Children
 Wright Drafts is intended for [OWNER-SELECTED AUDIENCE]. It is not directed to children under [13 / 18 / OWNER-SELECTED AGE].
@@ -34,6 +34,6 @@ Wright Drafts is intended for [OWNER-SELECTED AUDIENCE]. It is not directed to c
 [OWNER/COUNSEL TO CONFIRM operator location, applicable regions, legal bases, and required privacy-rights language.]
 
 ## Contact
-Operator: [LEGAL NAME OR BUSINESS NAME]
-Privacy contact: [SUPPORT EMAIL]
+Operator: WhichAi LLC
+Privacy contact: wright.support@mail.instinct.com
 Address: [IF REQUIRED]
