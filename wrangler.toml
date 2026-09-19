@@ -9,3 +9,11 @@ id = "865531b11951484ba3fd88a2327ea4a3"
 [[kv_namespaces]]
 binding = "POSTS"
 id = "909db5b090aa4df1a405d32bf2c5fa8e"
+
+[[durable_objects.bindings]]
+name = "PAIR_COORDINATOR"
+class_name = "PairCoordinator"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["PairCoordinator"]
