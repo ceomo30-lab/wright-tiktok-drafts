@@ -4,6 +4,7 @@ const TT='https://open.tiktokapis.com';
 export default {async fetch(req,env){const u=new URL(req.url);try{
  if(u.pathname==='/api/tiktok/oauth/start')return oauthStart(req,env);
  if(u.pathname==='/api/tiktok/oauth/callback')return oauthCallback(req,env);
+ if(req.method==='GET'&&!u.pathname.startsWith('/api/'))return fetch('https://ceomo30-lab.github.io/wright-tiktok-drafts'+u.pathname+u.search);
  const session=await getSession(req,env);if(!session)return json({error:'Connect TikTok first'},401);
  if(u.pathname==='/api/tiktok/creator-info'&&req.method==='GET')return creatorInfo(session,env);
  if(u.pathname==='/api/tiktok/direct-post'&&req.method==='POST')return directPost(req,session,env);
@@ -11,7 +12,6 @@ export default {async fetch(req,env){const u=new URL(req.url);try{
  if(u.pathname==='/api/tiktok/revoke'&&req.method==='POST')return revoke(session,env);
  if(u.pathname==='/api/queue'&&req.method==='GET')return queueList(session,env);
  if(u.pathname==='/api/queue/approve'&&req.method==='POST')return queueApprove(req,session,env);
- if(req.method==='GET')return fetch('https://ceomo30-lab.github.io/wright-tiktok-drafts'+u.pathname+u.search);
  return json({error:'Not found'},404);
  }catch(e){return json({error:'Request failed'},500)}}};
 async function oauthStart(req,env){const state=crypto.randomUUID(),sid=crypto.randomUUID();await env.SESSIONS.put('oauth:'+sid,JSON.stringify({state}),{expirationTtl:600});const redirect=new URL('/api/tiktok/oauth/callback',req.url).href;const q=new URLSearchParams({client_key:env.TIKTOK_CLIENT_KEY,scope:'user.info.basic,video.publish,video.upload',response_type:'code',redirect_uri:redirect,state});return new Response(null,{status:302,headers:{location:'https://www.tiktok.com/v2/auth/authorize/?'+q,'set-cookie':cookie('oauth',sid,600)}})}
