@@ -4,6 +4,9 @@
 
 This policy explains how Wright Drafts handles information when creators connect TikTok and prepare posts.
 
+## Cookies and similar technologies
+Wright Drafts uses only cookies or local storage that are necessary for sign-in, security, session continuity, and the posting features the creator requests. Optional analytics, advertising, personalization, and marketing cookies are disabled by default and are not used in the initial release. If optional cookies are added later, they require a separate choice and this policy will be updated before use. Infrastructure providers may set their own strictly necessary security or load-balancing cookies when delivering the service.
+
 ## Information handled
 - TikTok account identifiers and profile information authorized through Login Kit, such as open ID, username, nickname, and avatar.
 - OAuth access and refresh tokens needed to provide connected features.

@@ -29,3 +29,4 @@ Wright Drafts is a web app that helps creators prepare and publish original educ
 - Every post has a preview, editable caption, disclosure controls, TikTok declaration, and exact consent before transfer.
 - Batch review requires a separate approval checkbox for every immutable post version.
 - The service displays status and supports revocation/deletion.
+- The initial release uses only cookies/storage needed for sign-in, security, session continuity, and requested posting features; optional analytics, advertising, personalization, and marketing cookies are off.
