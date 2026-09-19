@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wright Drafts - Review post</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Wright Drafts</p>
+    <h1>Review one post</h1>
+    <p class="intro">Nothing is sent until you review this screen and tap Approve and post.</p>
+  </header>
+
+  <section class="account card" aria-labelledby="account-title">
+    <div><p class="label" id="account-title">Posting to</p><strong id="creatorName">Connect TikTok to confirm account</strong></div>
+    <button class="secondary" id="connectBtn">Connect TikTok</button>
+  </section>
+
+  <section aria-labelledby="preview-title">
+    <div class="section-head"><div><p class="label">Post 1</p><h2 id="preview-title">Carousel preview</h2></div><span class="badge">5 slides</span></div>
+    <div class="slides" aria-label="Carousel slides in posting order">
+      <figure><img src="../01.jpg" alt="Slide 1"><figcaption>1</figcaption></figure>
+      <figure><img src="../02.jpg" alt="Slide 2"><figcaption>2</figcaption></figure>
+      <figure><img src="../03.jpg" alt="Slide 3"><figcaption>3</figcaption></figure>
+      <figure><img src="../04.jpg" alt="Slide 4"><figcaption>4</figcaption></figure>
+      <figure><img src="../05.jpg" alt="Slide 5"><figcaption>5</figcaption></figure>
+    </div>
+    <p class="demo-note">Demo content only. This carousel was already posted and cannot be approved again.</p>
+  </section>
+
+  <form id="postForm">
+    <section class="card fields" aria-labelledby="details-title">
+      <h2 id="details-title">Post details</h2>
+      <label>Caption<textarea id="caption" maxlength="4000" rows="8">AI can finish the assignment. But when nobody defines the task, can your teen decide what is worth doing next?
+
+Wright gives teens repeated practice choosing a real problem, separating evidence from assumptions, testing what fails, and explaining what changed. Parents see the work itself, not a progress bar.
+
+Try the first challenge free. No login. No card. Ages 13-18.
+
+#ParentingTeens #AIForTeens #FutureReady #TeenEducation #WrightSchool</textarea></label>
+      <label>Privacy <span class="required">Required</span>
+        <select id="privacy" required><option value="" selected disabled>Choose privacy</option></select>
+      </label>
+      <label class="check"><input type="checkbox" id="comments"> Allow comments</label>
+      <label class="check"><input type="checkbox" id="autoMusic" checked> Let TikTok add fitting recommended music</label>
+      <p class="hint">You can change TikTok's recommended music later.</p>
+    </section>
+
+    <section class="card fields" aria-labelledby="disclosure-title">
+      <h2 id="disclosure-title">Commercial content</h2>
+      <label class="check"><input type="checkbox" id="commercial"> This post promotes a brand, product, or service</label>
+      <div id="commercialChoices" hidden>
+        <label class="check"><input type="checkbox" id="ownBrand"> Your brand <span class="hint">Labeled “Promotional content”</span></label>
+        <label class="check"><input type="checkbox" id="branded"> Branded content for another business <span class="hint">Labeled “Paid partnership”</span></label>
+      </div>
+      <p class="error" id="disclosureError" hidden>Choose at least one commercial-content type.</p>
+    </section>
+
+    <section class="card consent" aria-labelledby="consent-title">
+      <h2 id="consent-title">Final approval</h2>
+      <label class="check"><input type="checkbox" id="musicConsent" required> By posting, you agree to TikTok's Music Usage Confirmation.</label>
+      <label class="check"><input type="checkbox" id="exactPostConsent" required> I reviewed this exact carousel, caption, privacy, and disclosure and approve posting it now.</label>
+      <p class="hint">Processing can take a few minutes. Wright Drafts will show the status here.</p>
+      <button class="primary" type="submit" id="postBtn" disabled>Approve and post</button>
+      <p id="status" role="status">Connect TikTok and load creator options to continue.</p>
+    </section>
+  </form>
+
+  <section class="danger-zone">
+    <h2>Connected account</h2>
+    <button class="ghost" id="disconnectBtn" disabled>Disconnect and revoke TikTok access</button>
+  </section>
+</main>
+<script src="app.js"></script>
+</body></html>

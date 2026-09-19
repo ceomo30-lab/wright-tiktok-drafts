@@ -1,0 +1,16 @@
+name = "wright-drafts"
+main = "index.js"
+compatibility_date = "2026-09-18"
+
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "REPLACE_AFTER_CREATING_FREE_KV_NAMESPACE"
+
+[[kv_namespaces]]
+binding = "POSTS"
+id = "REPLACE_AFTER_CREATING_FREE_KV_NAMESPACE"
+
+[assets]
+directory = "../"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
