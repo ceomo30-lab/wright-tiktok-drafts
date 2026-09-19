@@ -12,6 +12,7 @@ export default {async fetch(req,env){const u=new URL(req.url);try{
  if(u.pathname==='/api/operator/status'&&req.method==='GET')return operatorStatus(req,env);
  if(u.pathname==='/api/operator/asset'&&req.method==='POST')return operatorAsset(req,env);
  if(u.pathname==='/api/operator/prepare-v3'&&req.method==='POST')return operatorPrepareV3(req,env);
+ if(u.pathname==='/media/immutable/tiktokYu4WAfbl6ij3EFs6jQ42S3VlZr2llDBD.txt'&&req.method==='GET')return new Response('tiktok-developers-site-verification=Yu4WAfbl6ij3EFs6jQ42S3VlZr2llDBD',{headers:{'content-type':'text/plain; charset=utf-8','cache-control':'public, max-age=300'}});
  if(u.pathname.startsWith('/media/immutable/')&&req.method==='GET')return immutableAsset(u,env);
  if(u.pathname==='/api/operator/spec'&&req.method==='GET')return operatorSpec(req,env);
  if(req.method==='GET'&&!u.pathname.startsWith('/api/'))return fetch('https://ceomo30-lab.github.io/wright-tiktok-drafts'+u.pathname+u.search);
